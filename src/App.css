@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+
+:root{
+
+  --prompt:'Prompt', sans-serif;
+
+}
+.menu-link a{
+
+  text-decoration: none;
+  color: white;
+
+
+}
+.app{
+  background-color: #000000;
+  height: 100vh;
+  position: relative;
+  line-height: 0;
+  letter-spacing: 0;
+}
+.header{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 104px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(2px);
+  padding-left: 82px;
+  padding-right: 82px;
+  
+}
+.header .menu-item:first-child{
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.spinner{
+  position:absolute;
+  right:82px;
+  z-index: 100000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-opened{
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  height: 85vh;
+  top: 104px;
+  left: 0;
+  right: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-image: url('../public/images/menubg.svg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 500px;
+  
+
+}
+.header-opened .nav-list{
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
   color: white;
 }
+.header-opened .menu-link{
 
-.App-link {
-  color: #61dafb;
+  display: block;
+  font-family: var(--prompt);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120px;
+  text-align: center;
+  letter-spacing: 0.44em;
+  text-transform: uppercase;
+  
+}
+.header-opened .menu-link .link{
+  position: relative;
+  padding-bottom: 8px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-opened .menu-link .link::before{
+  position: absolute;
+  content:"";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: ease-in 0.3s;
+  
 }
+.header-opened .menu-link .link:hover:before{
+  width: 100%; 
+}
+
+.head-title{
+  display: block;
+  color: white;
+  height: 160px;
+  width: 100%;
+  
+  text-align: center;
+  background-image: url('../public/images/northlion.svg');
+  background-size: contain;
+  background-position: center;
+
+  background-repeat: no-repeat;
+  
+}
+
+
+
+
+
+
+
+
+
+
